@@ -59,4 +59,10 @@ public class ProductService {
         product.setPrice(productDTO.getPrice());
         product.setImgUrl(productDTO.getImgUrl());
     }
+
+    @Transactional()
+    public void delete(Long id){
+
+        productRepository.deleteById(id);
+    }
 }
